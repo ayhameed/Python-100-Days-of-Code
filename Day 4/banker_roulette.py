@@ -10,9 +10,7 @@ names = names_string.split(", ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-
 length_name = len(names)
 random_payer_num = randrange(length_name)
 payer = names[random_payer_num]
-
 print(f"{payer} is going to buy the meal today!")
