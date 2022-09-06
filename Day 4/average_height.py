@@ -19,4 +19,4 @@ for height in student_heights:
 
 #divide the sum of numbers on list by the lenght of list
 average_height = sum / len_student
-print(int(average_height))
+print(round(average_height))
