@@ -29,7 +29,7 @@ scissors = '''
 '''
 
 #Write your code below this line 👇
-choice = int(input(" What do you choose ? \n Type 0 for Rock, 1 for Paper, 2 for Scissors."))
+choice = int(input(" What do you choose ? \n Type 0 for Rock, 1 for Paper, 2 for Scissors.\n"))
 
 # Display User Choice based on input
 if choice == 0:
