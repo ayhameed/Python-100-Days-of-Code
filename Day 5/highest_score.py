@@ -17,9 +17,5 @@ i = 0
 for i in range((len_score-1)):
     i+=1 
     if student_scores[i] > largest:
-        largest = student_scores[i]
-    
-print(f"The lenght  of the string is : {largest}")       
+        largest = student_scores[i]     
 print(f"The largest number is : {largest}")
-
-
