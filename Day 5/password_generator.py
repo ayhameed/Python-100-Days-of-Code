@@ -1,5 +1,6 @@
 #Password Generator Project
 
+from ast import Break
 from itertools import count
 import random
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -13,6 +14,14 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+# check if input does not exceed the length of the list holding the characters and numbers including symbols
+if nr_letters <= len(letters) and nr_numbers <= len(numbers) and nr_symbols <= len(symbols):
+    pass
+else:
+    print("An error has occured")
+    print (f" please enter numbers between 1 and {len(letters)} for letters")
+    print (f" please enter numbers between 1 and {len(numbers)} for numbers")
+    print (f" please enter numbers between 1 and {len(symbols)} for symbols")
 #get the lenght of the letters and reverse it
 letter_list = []
 for i in range(nr_letters):
