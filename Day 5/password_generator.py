@@ -36,5 +36,9 @@ letter_pass = ''.join(str(e) for e in letter_list)
 symbol_pass = ''.join(str(f) for f in symbol_list)
 number_pass = ''.join(str(g) for g in number_list)
 password = letter_pass + symbol_pass + number_pass
+
+#randomizes the final concat string using random.sample
+password_finall = ''.join(random.sample(password, len(password)))
+
 #test
-print(f"Generated password is : {password} ")
+print(f"Generated password is : {password_finall} ")
