@@ -1,7 +1,7 @@
 import random
 
 #Create a list holding the words
-word_list = ["donkey", "baboon", "elephant", "Tiger"]
+word_list = ["ardvak","donkey", "baboon", "elephant", "Tiger"]
 
 #randomly chose a word from word_list and assign it to a variable called chosen_word
 def randomWord():
@@ -19,16 +19,25 @@ def askUser():
 askUser()
 
 #Check if guess is in chosen_word
-def guessWord():
-    len_chosen_word = len(chosen_word)
-    guesses = 0
 
+# lenght of choosen word
+def len_chosen_word():
+    global len_chosen_word
+    len_chosen_word = len(chosen_word)
+    
+def guessWord():
+    len_chosen_word()
+    guesses = 0
+    global blanks
+    blanks = []
     if guesses  < len_chosen_word:
         for alpha in chosen_word:
             alpha = alpha
             if guess in alpha:
-                print("right")
+                blanks.append(guess)
             else:
-                print("wrong")
+                blanks.append('_')
             guesses+=1
 guessWord()
+
+print(blanks)
