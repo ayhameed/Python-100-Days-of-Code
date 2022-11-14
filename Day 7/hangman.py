@@ -14,30 +14,37 @@ randomWord()
 #ask the user to guess a letter and assign that to a variable called guess. convert to lower case
 def askUser():
     global guess 
-    guess = input("Guess a letter: ")
-    guess = guess.lower()
+    guess = input("Guess a letter: ").lower()
 askUser()
 
 #Check if guess is in chosen_word
 
 # lenght of choosen word
-def len_chosen_word():
+def len_chosen_word1():
     global len_chosen_word
     len_chosen_word = len(chosen_word)
     
 def guessWord():
-    len_chosen_word()
+    len_chosen_word1()
     guesses = 0
+    alpha_count = 0
     global blanks
     blanks = []
+    blank = blanks
     if guesses  < len_chosen_word:
         for alpha in chosen_word:
             alpha = alpha
+            alpha_count+=1
             if guess in alpha:
-                blanks.append(guess)
+                blank.append(guess) 
             else:
-                blanks.append('_')
+                blank.append('_')
             guesses+=1
+    print(blank)
 guessWord()
 
-print(blanks)
+#search for occurence of blanks and replace
+
+while '_' in blanks:
+    askUser()
+    guessWord()
