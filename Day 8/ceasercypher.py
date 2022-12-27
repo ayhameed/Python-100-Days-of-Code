@@ -8,7 +8,6 @@ print(logo)
 
 #keep the program running until user says otherwise
 
-
 decision = True
 while decision:
     #Accept user inputs
