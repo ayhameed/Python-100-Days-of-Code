@@ -10,31 +10,34 @@ from time import sleep
 def clear():
     # check and make call for specific operating system
     _ = call('clear' if os.name == 'posix' else 'cls')
+aunctioners = []
 
 print(logo)
 print("Welcome to the secret auction program.")
-aunctioners = []
 
 def bider_details():
     name = input("what is your name: \n")
-    bid = input("What's your bid?: $")
+    bid = int(input("What's your bid?: $"))
     
     bidder_dict = {}
     bidder_dict["name"] = name
     bidder_dict["bid"] = bid
     aunctioners.append(bidder_dict)
 
+def each_aunctioner():
+    highes_value = 0
+    for aunctioner in aunctioners:
+        bids = aunctioner.get("bid")
+    if bids < highes_value:
+        highes_value == bids
+    print(highes_value)
+    
 other_biders = "yes" 
 while other_biders == "yes":
     bider_details()
-    other_biders = input("Are there any other bidders: ")
-    sleep(1)
-    clear()
+    other_biders = input("Are there any other bidders: ") 
     if other_biders == "no":
         other_biders == "no"
-print(aunctioners)
 
-
-
-
-
+each_aunctioner()
+# print(aunctioners)
